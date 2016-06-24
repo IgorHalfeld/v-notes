@@ -13,6 +13,7 @@ Features
 - [ ] Table styles on Markdown
 - [ ] Iframe styles on Markdown
 - [ ] Highlighter syntax
+- [ ] Appcache
 
 
 
