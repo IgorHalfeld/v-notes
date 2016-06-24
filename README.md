@@ -5,8 +5,8 @@ vNotes
 
 [DEMO](http://halfeld.github.io/v-notes)
 
-Features
---------
+Will be implemented
+-------------------
 
 - [x] Persistence with Local Storage API  
 - [x] Write markdown
@@ -14,6 +14,7 @@ Features
 - [ ] Iframe styles on Markdown
 - [ ] Highlighter syntax
 - [ ] Appcache
+- [ ] Import and export notes
 
 
 
