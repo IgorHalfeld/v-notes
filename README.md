@@ -6,8 +6,6 @@
 
 **It will be implemented syntax highlight**
 
-> A digital notebook
-
 ## Build Setup
 
 ``` bash
