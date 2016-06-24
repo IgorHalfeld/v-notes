@@ -1,12 +1,23 @@
-# vNotes
+vNotes
+======
 
 > Simple and beautiful notepad to Markdown with VueJs and Local Storage API
 
 [DEMO](http://halfeld.github.io/v-notes)
 
-**It will be implemented syntax highlight**
+Features
+--------
 
-## Build Setup
+- [x] Persistence with Local Storage API  
+- [x] Write markdown
+- [ ] Table styles on Markdown
+- [ ] Iframe styles on Markdown
+- [ ] Highlighter syntax
+
+
+
+Build Setup
+-----------
 
 ``` bash
 # install dependencies
