@@ -12,10 +12,11 @@ Will be implemented
 - [x] Write markdown
 - [ ] Table styles on Markdown
 - [ ] Iframe styles on Markdown
+- [ ] Ctrl + s to save
 - [ ] Highlighter syntax
 - [ ] Appcache
 - [ ] Import and export notes
-
+- [ ] Speech Recognition API :D
 
 
 Build Setup
