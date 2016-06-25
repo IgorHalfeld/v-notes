@@ -93,7 +93,7 @@
       color: $gray_second;
       flex-basis: 250px;
       height: 230px;
-      overflow-y: hidden;
+      overflow: hidden;
       transition: all .3s ease;
       box-shadow: 0px 0px 30px 15px $gray_second;
       cursor: pointer;

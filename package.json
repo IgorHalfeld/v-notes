@@ -1,6 +1,6 @@
 {
   "name": "v-note",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A digital notebook",
   "author": "Halfeld <igorelmerico@hotmail.com>",
   "scripts": {

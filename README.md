@@ -10,8 +10,8 @@ Will be implemented
 
 - [x] Persistence with Local Storage API  
 - [x] Write markdown
-- [ ] Table styles on Markdown
-- [ ] Iframe styles on Markdown
+- [x] Table styles on Markdown
+- [x] Iframe styles on Markdown
 - [ ] Ctrl + s to save
 - [ ] Highlighter syntax
 - [ ] Appcache

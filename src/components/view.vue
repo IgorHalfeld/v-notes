@@ -45,12 +45,13 @@ export default {
   .viewnote {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 1000px;
     max-width: 1000px;
     margin: 26px auto;
 
     > .viewnote__body {
-      flex-basis: 1000px;
+      flex-basis: 800px;
       color: #999;
 
       h1,
@@ -64,6 +65,32 @@ export default {
 
       p {
         line-height: 160%;
+      }
+
+      table {
+        margin: 50px auto;
+
+        th,
+        td {
+          border: 2px solid $gray_first;
+          padding: 10px;
+        }
+
+      }
+
+      > img,
+      > p > img {
+        width: 100%;
+      }
+
+      > iframe {
+        width: 100%;
+        box-shadow: 0px 10px 30px 2px #aaa;
+        /*+below($size-tablet)
+        height rem(410px)
+        +below(480px)
+        height rem(300px)*/
+
       }
 
       code {
