@@ -49,7 +49,7 @@
 
       formatDate (date) {
         const month = 'jan fev mar apr may jun jul aug sep oct nov dec'.split(' ');
-        return `${date.getDay()} ${month[date.getMonth()]} ${date.getFullYear()}`;
+        return `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
       }
     }
   }
