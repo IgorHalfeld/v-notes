@@ -2,7 +2,6 @@ import Vue from 'vue';
 import App from './App.vue';
 import Article from './components/article.vue';
 import Create from './components/create.vue';
-import Edit from './components/edit.vue';
 import View from './components/view.vue';
 import VueRouter from 'vue-router';
 
