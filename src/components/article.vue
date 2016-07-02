@@ -1,8 +1,12 @@
 <template>
     <section class="listnotes">
       <div class="listnotes__note" v-for="note in notes | filterBy search in 'title'" v-link="{ name: 'view', params: { noteId: note.date }}">
-        <svg class="listnotes__note--edit" v-link="{ name: 'edit', params: { noteId: note.date }}" ><use xlink:href="#icon-icon-pens"></use></svg>
-        <svg class="listnotes__note--close" @click="removeNote($index)" ><use xlink:href="#icon-icon-close"></use></svg>
+        <svg class="listnotes__note--edit" v-link="{ name: 'edit', params: { noteId: note.date }}" >
+          <use xlink:href="#icon-icon-pens"></use>
+        </svg>
+        <svg class="listnotes__note--close" @click="removeNote($index)">
+          <use xlink:href="#icon-icon-close"></use>
+        </svg>
         <h1>{{note.title | capitalize}}</h1>
         <span>{{formatDate(new Date(note.date))}}</span>
         {{{render(note.text)}}}
@@ -14,8 +18,10 @@
   import marked from 'marked';
 
   export default {
-    props: {
-      search: String
+    vuex: {
+      getters: {
+        search: store => store.search
+      }
     },
     data () {
       return {

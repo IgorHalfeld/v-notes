@@ -1,15 +1,29 @@
 <template>
   <section class="createnote">
     <div class="createnote__field">
+      <!-- Load Fied -->
       {{getNote($route.params.noteId)}}
-      <input class="createnote__field--title" type="text" placeholder="Title note" v-model="note.title" @keyup="$dispatch('NewNote', note)">
-      <textarea class="createnote__field--text" placeholder="This is my note written in Markdown" v-model="note.text" @keyup="$dispatch('NewNote', note)"></textarea>
+      <input class="createnote__field--title" type="text" placeholder="Title note" v-model="note.title" @keyup="setNote()">
+      <textarea class="createnote__field--text" placeholder="This is my note written in Markdown" v-model="note.text" @keyup="setNote()"></textarea>
     </div>
   </section>
 </template>
 
 <script>
 export default {
+  vuex: {
+    actions: {
+      // Set current note state
+      // =====================
+      setNote ({ dispatch }) {
+        setTimeout( () => {
+          this.note.date = new Date().getTime();
+          dispatch('SET_NOTE', this.note);
+        }, 1000);
+      }
+    }
+  },
+
   data () {
     return {
       note: {
@@ -18,7 +32,10 @@ export default {
       }
     }
   },
+
   methods: {
+    // Populate fields on route edit
+    // =============================
     getNote (id) {
       const note = JSON.parse(localStorage.getItem('vNotes'));
       note.notes.filter(n => {
@@ -29,6 +46,7 @@ export default {
       });
     }
   }
+
 }
 </script>
 

@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-    <header-main :note="newNote"></header-main>
-    <router-view :search="QuestEngine" transition="left"></router-view>
+    
+    <!-- navbar -->
+    <header-main></header-main>
+
+    <!-- main -->
+    <router-view transition="left"></router-view>
   </div>
 </template>
 
@@ -11,38 +15,29 @@
  export default {
    data () {
      return {
-       QuestEngine: '',
-       newNote: {},
-       notes: []
+
      }
    },
+
    components: {
      HeaderMain
    },
+
+   // Call method to start a structure on localStorage
+   // ================================================
    attached () {
      const notes = localStorage.getItem('vNotes');
      if(notes == null || !Object.keys(notes) > 0) {
        this.start();
      }
    },
+
    methods: {
      start () {
        localStorage.setItem('vNotes', JSON.stringify({
          version: '0.1.0',
          notes: []
-       }))
-     }
-   },
-   events: {
-     QuestEngine (quest) {
-       this.QuestEngine = quest;
-     },
-     NewNote (note) {
-       this.newNote = {
-         title: note.title,
-         text: note.text,
-         date: new Date().getTime()
-       };
+       }));
      }
    }
  }

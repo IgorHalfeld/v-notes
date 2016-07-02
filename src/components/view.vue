@@ -12,16 +12,14 @@
 import marked from 'marked';
 
 export default {
-  data: function () {
+  data () {
     return {
       title: '',
       text: ''
     }
   },
-  computed: {},
-  ready () {},
-  attached () {},
   methods: {
+    // Get note on localStorage
     getNote (id) {
       const note = JSON.parse(localStorage.getItem('vNotes'));
       note.notes.filter(n => {

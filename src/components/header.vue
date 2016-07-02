@@ -1,37 +1,39 @@
 <template>
     <header class="header">
+      <!-- search -->
       <div class="header__searchbox">
-        <input :disabled="$route.path == '/create/'" class="header__searchbox--input" type="text" placeholder="search your notes" v-model="quest" @keyup="$dispatch('QuestEngine', quest)">
+        <input :disabled="$route.path == '/create/'" class="header__searchbox--input" type="text" placeholder="search your notes" v-model="quest"  @keyup="setEngineSearch(quest)">
       </div>
+
+      <!-- buttons -->
       <div class="header__btngroup">
         <button v-link="'/create/'" class="header__btngroup--new" type="button">New</button>
-        <button v-if="($route.path == '/create/') || ($route.name == 'edit')" v-link="'/'" class="header__btngroup--save" type="button" @click="addNote(note, $route.params.noteId)">Save</button>
+        <button v-if="($route.path == '/create/') || ($route.name == 'edit')" v-link="'/'" class="header__btngroup--save" type="button" @click="addNote($route.params.noteId)">Save</button>
       </div>
     </header>
 </template>
 
 <script>
   export default {
-    props: {
-      note: Object
-    },
-    data () {
-      return {
-        quest: ''
+    vuex: {
+      actions: {
+        // Add note
+        // ========
+        addNote ({ dispatch }, noteId) {
+          dispatch('ADD_NOTE', noteId);
+        },
+
+        // Set engine
+        // ==========
+        setEngineSearch ({ dispatch }, engine) {
+          dispatch('SET_ENGINE_SEARCH', engine);
+        }
       }
     },
-    methods: {
-      addNote (newNote, noteId) {
-        let note = JSON.parse(localStorage.getItem('vNotes'));
-        note.notes.filter(n => {
-          if(noteId == n.date) note.notes.splice(n, 1);
-        });
-        note.notes.unshift({
-          title: newNote.title,
-          text: newNote.text,
-          date: newNote.date
-        });
-        localStorage.setItem('vNotes', JSON.stringify(note));
+
+    data () {
+      return {
+
       }
     }
   }
