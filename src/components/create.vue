@@ -3,8 +3,8 @@
     <div class="createnote__field">
       <!-- Load Fied -->
       {{getNote($route.params.noteId)}}
-      <input class="createnote__field--title" type="text" placeholder="Title note" v-model="note.title" @keyup="setNote()">
-      <textarea class="createnote__field--text" placeholder="This is my note written in Markdown" v-model="note.text" @keyup="setNote()"></textarea>
+      <input class="createnote__field--title" type="text" placeholder="Title note" v-model="note.title" @keyup="setNote() | debounce 500">
+      <textarea class="createnote__field--text" placeholder="This is my note written in Markdown" v-model="note.text" @keyup="setNote() | debounce 500"></textarea>
     </div>
   </section>
 </template>
@@ -16,10 +16,8 @@ export default {
       // Set current note state
       // =====================
       setNote ({ dispatch }) {
-        setTimeout( () => {
-          this.note.date = new Date().getTime();
-          dispatch('SET_NOTE', this.note);
-        }, 1000);
+        this.note.date = new Date().getTime();
+        dispatch('SET_NOTE', this.note);
       }
     }
   },
