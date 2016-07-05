@@ -84,10 +84,6 @@ export default {
       > iframe {
         width: 100%;
         box-shadow: 0px 10px 30px 2px #aaa;
-        /*+below($size-tablet)
-        height rem(410px)
-        +below(480px)
-        height rem(300px)*/
 
       }
 
