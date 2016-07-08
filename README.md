@@ -1,7 +1,7 @@
 vNotes
 ======
 
-> Simple and beautiful notepad to Markdown with VueJs and Local Storage API
+> Simple and beautiful notepad to Markdown with VueJs and Local Storage API.
 
 [DEMO](http://halfeld.github.io/v-notes)
 
