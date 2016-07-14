@@ -1,6 +1,8 @@
 vNotes
 ======
 
+![travis](https://api.travis-ci.org/Halfeld/v-notes.svg?branch=master)
+
 > Simple and beautiful notepad to Markdown with VueJs and Local Storage API.
 
 [DEMO](http://halfeld.github.io/v-notes)
