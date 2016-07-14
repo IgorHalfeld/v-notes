@@ -16,7 +16,7 @@ Will be implemented
 - [x] <s>Iframe styles on Markdown</s>
 - [ ] Ctrl + s to save
 - [x] <s>Highlighter syntax</s>
-- [ ] Appcache
+- [ ] Service Worker
 - [ ] Import and export notes
 - [ ] Speech Recognition API :D
 
