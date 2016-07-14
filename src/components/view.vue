@@ -10,6 +10,14 @@
 
 <script>
 import marked from 'marked';
+import highlight from 'highlight.js';
+import '../../node_modules/highlight.js/styles/github.css';
+
+marked.setOptions({
+  highlight (code) {
+    return highlight.highlightAuto(code).value;
+  }
+});
 
 export default {
   data () {
@@ -93,6 +101,15 @@ export default {
         border-radius: 4px;
         padding: 3px;
         font-size: 15px;
+      }
+
+      pre {
+        padding: 15px;
+        background-color: #f4f4f4;
+
+        code[class="lang-javascript"] {
+          background-color: transparent;
+        }
       }
 
       > blockquote {

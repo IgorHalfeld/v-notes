@@ -16,6 +16,14 @@
 
 <script>
   import marked from 'marked';
+  import highlight from 'highlight.js';
+  import '../../node_modules/highlight.js/styles/github.css';
+
+  marked.setOptions({
+    highlight (code) {
+      return highlight.highlightAuto(code).value;
+    }
+  });
 
   export default {
     vuex: {

@@ -10,12 +10,12 @@ vNotes
 Will be implemented
 -------------------
 
-- [x] Persistence with Local Storage API  
-- [x] Write markdown
-- [x] Table styles on Markdown
-- [x] Iframe styles on Markdown
+- [x] <s>Persistence with Local Storage API</s>
+- [x] <s>Write markdown</s>
+- [x] <s>Table styles on Markdown</s>
+- [x] <s>Iframe styles on Markdown</s>
 - [ ] Ctrl + s to save
-- [ ] Highlighter syntax
+- [x] <s>Highlighter syntax</s>
 - [ ] Appcache
 - [ ] Import and export notes
 - [ ] Speech Recognition API :D
