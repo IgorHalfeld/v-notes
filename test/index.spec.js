@@ -1,13 +1,10 @@
-
+var App = require('./../src/App.vue');
 var Mutations = require('./../src/vuex/mutations').default;
 
 describe('Local Storage', function () {
 
   beforeAll(function() {
-    localStorage.setItem('vNotes', JSON.stringify({
-      version: '0.1.0',
-      notes: []
-    }));
+    App.methods.start();
   });
 
   afterAll(function() {
