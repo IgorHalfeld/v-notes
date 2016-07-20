@@ -46,6 +46,7 @@ export default {
   $gray_first: #f2f2f2;
   $gray_second: #e6e6e6;
   $main_color: #ff9999;
+  $main_second_color: #ff6666;
 
 
   .viewnote {
@@ -133,7 +134,9 @@ export default {
 
 
       > .viewnote__body--title {
-        color: $main_color;
+        color: $main_second_color;
+        border-bottom: 1px solid $gray_first;
+        /*color: $main_color;*/
       }
     }
   }
