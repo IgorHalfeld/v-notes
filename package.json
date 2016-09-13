@@ -2,7 +2,8 @@
   "name": "v-note",
   "version": "0.2.2",
   "description": "A digital notebook",
-  "author": "Halfeld <igorelmerico@hotmail.com>",
+  "author": "Halfeld <igor@devstacks.com.br>",
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
