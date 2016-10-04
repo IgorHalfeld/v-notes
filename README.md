@@ -10,6 +10,8 @@ vNotes
 Will be implemented
 -------------------
 
+> I started the development for upgrade to Vue 2.0, see the [to-do list](https://github.com/Halfeld/v-notes/projects/1).
+
 - [x] <s>Persistence with Local Storage API</s>
 - [x] <s>Write markdown</s>
 - [x] <s>Table styles on Markdown</s>
