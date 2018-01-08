@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    
+
     <!-- navbar -->
     <header-main></header-main>
 
